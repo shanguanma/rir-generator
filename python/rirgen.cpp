@@ -230,6 +230,7 @@ std::vector< std::vector<double> > gen_rir(double c, double fs, const std::vecto
 	std::vector< std::vector<double> > imp(nMicrophones);
 	for (int idxMicrophone = 0; idxMicrophone < nMicrophones ; idxMicrophone++)
 		imp[idxMicrophone].resize(nSamples);
+		
 
 	// Temporary variables and constants (high-pass filter)
 	const double W = 2*M_PI*100/fs; // The cut-off frequency equals 100 Hz
@@ -306,6 +307,7 @@ std::vector< std::vector<double> > gen_rir(double c, double fs, const std::vecto
 								if (std::abs(2*mx-q)+std::abs(2*my-j)+std::abs(2*mz-k) <= nOrder || nOrder == -1)
 								{
 									fdist = floor(dist);
+
 									if (fdist < nSamples)
 									{
 										gain = sim_microphone(Rp_plus_Rm[0], Rp_plus_Rm[1], Rp_plus_Rm[2], angle, microphone_type)

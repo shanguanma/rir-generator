@@ -1,3 +1,7 @@
+# This must be run as follows on WSL. 
+# export LD_LIBRARY_PATH=$PWD
+# python3 example_2.py
+
 import pyrirgen
 
 c = 340                          # Sound velocity (m/s)
@@ -14,4 +18,10 @@ orientation = 0                  # Microphone orientation (rad)
 hp_filter = True                 # Enable high-pass filter
 
 h = pyrirgen.generateRir(L, s, r, soundVelocity=c, fs=fs, reverbTime=rt, nSamples=n, micType=mtype, nOrder=order, nDim=dim, isHighPassFilter=hp_filter)
-print(len(h))
+
+# Uncomment if you want to save the generated RIR.
+#import numpy as np
+#outfile = 'example_2'
+#h = np.array(h)
+#np.savez(outfile, filter=h)
+
