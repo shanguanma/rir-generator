@@ -7,7 +7,7 @@ This function enables the user to control the reflection order, room dimension, 
 This repository includes a tutorial, MATLAB examples, and the source code of the mex-function.
 A similar interface is available as a Python module and a C++ shared library. This uses Cython and requires the library to be built. 
 
-A pure Python implementation using NumPy is also available, but this is 10-20x slower than the Cython version. 
+A pure Python implementation using NumPy is also available, but this is 10-20x slower than the Cython version. This was implemented for my personal learning. 
 
 More information can be found [here](https://www.audiolabs-erlangen.de/fau/professor/habets/software/rir-generator).
 
