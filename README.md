@@ -1,14 +1,21 @@
 # RIR-Generator
 
 The image method, proposed by Allen and Berkley in 1979 [1], is probably one of the most frequently used methods in the acoustic signal processing community to create synthetic room impulse responses. 
-A mex-function, which can be used in MATLAB, was developed to generate multi-channel room impulse responses using the image method. 
-This function enables the user to control the reflection order, room dimension, and microphone directivity. 
 
-This repository includes a tutorial, MATLAB examples, and the source code of the mex-function.
-A similar interface is available as a Python module and a C++ shared library. This uses Cython and requires the library to be built. 
+This repository includes both Cython and NumPy implementations of the image method along with a tutorial written by Dr. Emanuel A. P. Habets. (The NumPy version is 20-30x slower than the Cython verion. This was written for my personal learning purposes.)
 
-A pure Python implementation using NumPy is also available, but this is 10-20x slower than the Cython version. This was implemented for my personal learning. 
-
-More information can be found [here](https://www.audiolabs-erlangen.de/fau/professor/habets/software/rir-generator).
+This repository was forked from https://github.com/Marvin182/rir-generator. For more information, visit the original repository. 
 
 1. J.B. Allen and D.A. Berkley, "Image method for efficiently simulating small-room acoustics," Journal Acoustic Society of America, 65(4), April 1979, p 943.
+
+
+Installing pyrirgen (Cython version) for Python3.5 on Windows
+-------------
+pip install .\pyrirgen-py35-win_amd64\pyrirgen-0.0.0-cp35-cp35m-win_amd64.whl
+
+
+
+Installing nprirgen (NumPy version)
+-------------
+pip install -e ./nprirgen
+

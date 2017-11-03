@@ -7,22 +7,22 @@ import numpy as np
 # python3 setup.py build_ext --inplace
 
 extensions = [
-	Extension("*", ["pyrirgen.pyx"],
-		include_dirs=[
-			os.path.abspath("."),
-		],
-		library_dirs=[os.path.abspath(".")],
-		libraries=["rirgen"],
+	Extension("*", 
+        sources=["pyrirgen.pyx"],
+		include_dirs=[os.path.abspath(".")],
 		language='c++'
 	),
 ]
 
 setup(
 	name = 'pyrirgen',
-	ata_files = [('', ['librirgen.so'])],
+    author = "ty274", 
+    description = "Cython-based image method implementation for room impulse response generation",
+    packages = setuptools.find_packages(), 
+
 	ext_modules=cythonize(extensions, compiler_directives = {
-		'language_level': 3, # Python 3
-		'embedsignature': True, # add method signature to docstrings, thus tools can display it after compilation
+		'language_level': 3, # Build for Python 3
+		'embedsignature': True,
 		'c_string_encoding': 'default',
 		'c_string_type': 'str',
 	}),

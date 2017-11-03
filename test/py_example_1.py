@@ -1,4 +1,4 @@
-import nprirgen
+import pyrirgen
 import matplotlib.pyplot as plt
 
 c = 340                          # Sound velocity (m/s)
@@ -9,7 +9,7 @@ L = [5, 4, 6]                    # Room dimensions [x y z] (m)
 rt = 0.4                         # Reverberation time (s)
 n = 2048                         # Number of samples
 
-h, _, _ = nprirgen.np_generateRir(L, s, r, soundVelocity=c, fs=fs, reverbTime=rt, nSamples=n)
+h = pyrirgen.generateRir(L, s, r, soundVelocity=c, fs=fs, reverbTime=rt, nSamples=n)
 
 plt.figure()
 plt.plot(h)

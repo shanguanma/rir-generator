@@ -1,1 +1,6 @@
 *.npz
+__pycache__/
+*.py[cod]
+
+build/
+pyrirgen.egg-info/
