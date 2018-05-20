@@ -9,9 +9,11 @@ This repository was forked from https://github.com/Marvin182/rir-generator. For 
 1. J.B. Allen and D.A. Berkley, "Image method for efficiently simulating small-room acoustics," Journal Acoustic Society of America, 65(4), April 1979, p 943.
 
 
-Installing pyrirgen (Cython version) for Python3.5 on Windows
+Installing pyrirgen (Cython version) on Windows
 -------------
-pip install .\pyrirgen-py35-win_amd64\pyrirgen-0.0.0-cp35-cp35m-win_amd64.whl
+- Python 3.5: pip install .\pyrirgen-py35-win_amd64\pyrirgen-0.0.0-cp35-cp35m-win_amd64.whl
+- Python 3.6: pip install .\pyrirgen-py36-win_amd64\pyrirgen-0.0.0-cp36-cp36m-win_amd64.whl
+
 
 
 
