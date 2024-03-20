@@ -21,3 +21,11 @@ Installing nprirgen (NumPy version)
 -------------
 pip install -e ./nprirgen
 
+
+Installing pyrirgen (py version)
+pip install -e ./pyrirgen
+
+This package is used by `https://github.com/jsalt2020-asrdiar/jsalt2020_simulate/blob/master/libaueffect/room_simulators/genrir.py#L191`
+
+[UPDATE](2024-3-20):
+https://github.com/Marvin182/rir-generator is not exist now.
